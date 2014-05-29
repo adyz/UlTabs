@@ -14,7 +14,12 @@
 		// Create the defaults once
 		var pluginName = "UlTabs",
 				defaults = {
-				propertyName: "value"
+                classTabWrapper: 'tab-link',
+                classTabContent: 'tab-content',
+                classActive: 'active',
+                buttonType: 'a',
+                border: 0,
+                height: 30
 		};
 
 		// The actual plugin constructor
@@ -38,10 +43,35 @@
 						// and this.settings
 						// you can add more functions like the one below and
 						// call them like so: this.yourOtherFunction(this.element, this.settings).
-						console.log("xD");
+						//console.log("dsadadasd");
+                        this.defaultState(this.element, this.settings);
 				},
-				yourOtherFunction: function () {
-						// some logic
+                defaultState: function (element, settings) {
+
+
+                    var $thisUl = $(element);
+                    var $tabLinks = $thisUl.find('.'+ settings.classTabWrapper +' ' + settings.buttonType);
+
+                    //Hide all tabs
+                    $thisUl.find('.' + settings.classTabContent).hide();
+
+                    //Find active tab and show
+                    var getFstItem = $thisUl.find('.' + settings.classTabWrapper + '.' + settings.classActive + ' .' + settings.classTabContent +'').show().outerHeight();
+                    $thisUl.height(getFstItem + settings.height + (settings.border * 2));
+
+
+                    //On tab click
+                    $tabLinks.on('click', function(e){
+                        var $this = $(this);
+                        $thisUl.find('.' + settings.classTabWrapper).removeClass(settings.classActive);
+                        $this.parent('.' + settings.classTabWrapper).addClass(settings.classActive);
+                        e.preventDefault();
+                        $thisUl.find('.' + settings.classTabContent).hide();
+                        var $thisTab = $(this).parents('.' + settings.classTabWrapper).find('.' + settings.classTabContent);
+                        var thisTabHeight = $thisTab.outerHeight() + settings.height + (settings.border * 2);
+                        $thisTab.fadeIn();
+                        $thisUl.height(thisTabHeight);
+                    });
 				}
 		};
 

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.ul-tabs {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid #cccccc;
+  overflow: auto;
+}
+.ul-tabs .tab-link {
+  display: inline-block;
+  float: left;
+}
+.ul-tabs .tab-link > a {
+  dislay: inline-block;
+  float: left;
+  padding: 0 10px 0 10px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #cccccc;
+  border-left: 0;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+  z-index: 3;
+}
+.ul-tabs .tab-link.active a {
+  border-bottom: 1px solid #fff;
+}
+.ul-tabs .tab-content {
+  position: absolute;
+  display: inline-block;
+  float: left;
+  border: 1px solid #cccccc;
+  margin: 0;
+  padding: 20px;
+  top: 31px;
+  left: -1px;
+}
+
+.ul-tabs--arrow .tab-link {
+  background: #eee;
+}
+.ul-tabs--arrow .tab-link > a {
+  font-size: 12px;
+}
+.ul-tabs--arrow .tab-link.active a {
+  border-bottom: 1px solid #cccccc;
+}
+.ul-tabs--arrow .tab-link.active a:after {
+  content: '▴';
+  display: block;
+  position: relative;
+  top: -17px;
+  font-size: 25px;
+  left: 50%;
+  margin-left: -5px;
+  color: #fff;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2);
+}

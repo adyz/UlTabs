@@ -1,0 +1,16 @@
+@import "normalize";
+.wrap {
+  max-width: 980px;
+  padding:20px;
+  margin: 0 auto;
+}
+
+
+.demos {
+  padding: 20px 0;
+  
+  article {
+    width: 50%;
+    float: left;
+  }
+}
