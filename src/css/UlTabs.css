@@ -32,9 +32,10 @@
   float: left;
   border: 1px solid #cccccc;
   margin: 0;
-  padding: 20px;
-  top: 31px;
+  padding: 20px 10px;
+  top: 29px;
   left: -1px;
+  width: 100%;
 }
 
 .ul-tabs--arrow .tab-link {

@@ -1,10 +1,12 @@
-$tab-links-height: 30px;
-$color-border: #ccc;
+$ultabs__tab-links-height: 30px;
+$ultabs__border__thickneds: 1px;
+$ultabs__border__color: #ccc;
+
 .ul-tabs {
   position:relative;
   margin:0;
   padding:0;
-  border-left:1px solid $color-border;
+  border-left:$ultabs__border__thickneds solid $ultabs__border__color;
   overflow:auto;
   .tab-link {
     display:inline-block;
@@ -15,10 +17,10 @@ $color-border: #ccc;
       padding:0 10px 0 10px;
       color:#000;
       text-decoration:none;
-      border:1px solid $color-border;
+      border:$ultabs__border__thickneds solid $ultabs__border__color;
       border-left:0;
-      height:$tab-links-height;
-      line-height:$tab-links-height;
+      height:$ultabs__tab-links-height;
+      line-height:$ultabs__tab-links-height;
       position:relative;
       z-index:3;
 
@@ -33,11 +35,13 @@ $color-border: #ccc;
     position:absolute;
     display:inline-block;
     float:left;
-    border:1px solid $color-border;
+    border:$ultabs__border__thickneds solid $ultabs__border__color;
     margin:0;
-    padding:20px;
-    top:$tab-links-height + 1px;
-    left:-1px;
+    padding:20px 10px;
+    top:$ultabs__tab-links-height - $ultabs__border__thickneds;   //If you don't use box-sizing border-box add + 1px
+    left:- $ultabs__border__thickneds;
+    width: 100%;
+    //border-radius: 5px;
   }
 }
 
@@ -45,13 +49,12 @@ $color-border: #ccc;
 .ul-tabs--arrow {
   .tab-link {
     background: #eee;
-
     > a {
       font-size: 12px;
     }
     &.active {
       a {
-        border-bottom:1px solid $color-border;
+        border-bottom:$ultabs__border__thickneds solid $ultabs__border__color;
 
         &:after {
           content: '▴';

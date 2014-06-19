@@ -19,7 +19,7 @@
                 classActive: 'active',
                 buttonType: 'a',
                 border: 0,
-                height: 30
+                height: 30  //@todo Make auto height for the buttons
 		};
 
 		// The actual plugin constructor
@@ -57,7 +57,7 @@
 
                     //Find active tab and show
                     var getFstItem = $thisUl.find('.' + settings.classTabWrapper + '.' + settings.classActive + ' .' + settings.classTabContent +'').show().outerHeight();
-                    $thisUl.height(getFstItem + settings.height + (settings.border * 2));
+                    $thisUl.height(getFstItem + settings.height); //@todo Update when jquery bug for outheight on border box is fixed (If no border box add + (settings.border * 2) )
 
 
                     //On tab click
@@ -68,7 +68,7 @@
                         e.preventDefault();
                         $thisUl.find('.' + settings.classTabContent).hide();
                         var $thisTab = $(this).parents('.' + settings.classTabWrapper).find('.' + settings.classTabContent);
-                        var thisTabHeight = $thisTab.outerHeight() + settings.height + (settings.border * 2);
+                        var thisTabHeight = $thisTab.outerHeight() + settings.height;  //@todo Update when jquery bug for outheight on border box is fixed (If no border box add + (settings.border * 2) )
                         $thisTab.fadeIn();
                         $thisUl.height(thisTabHeight);
                     });

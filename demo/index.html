@@ -19,14 +19,14 @@
             <article>
                 <h2>Default</h2>
                 <ul class="ul-tabs">
-                    <li class="tab-link active"><a href="#">Regular</a>
+                    <li class="tab-link "><a href="#">Regular</a>
                         <ul class="tab-content">
                             <li>First tab content</li>
                             <li>Aliquam tincidunt mauris eu risus.</li>
                             <li>Vestibulum auctor dapibus neque.</li>
                         </ul>
                     </li>
-                    <li class="tab-link"><a href="#">Super</a>
+                    <li class="tab-link active"><a href="#">Super</a>
                         <ul class="tab-content">
                             <li>Second tab content</li>
                             <li>Aliquam tincidunt mauris eu risus.</li>
@@ -37,6 +37,54 @@
                         </ul>
                     </li>
                 </ul>
+
+
+                <h3>Source</h3>
+
+                <ul class="ul-tabs">
+                    <li class="tab-link active"><a href="#">HTML</a>
+                        <ul class="tab-content">
+<pre>
+<ul class="ul-tabs">
+    <li class="tab-link "><a href="#">Regular</a>
+        <ul class="tab-content">
+            <li>First tab content</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+    </li>
+    <li class="tab-link active"><a href="#">Super</a>
+        <ul class="tab-content">
+            <li>Second tab content</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+    </li>
+</ul>
+</pre>
+                        </ul>
+                    </li>
+                    <li class="tab-link"><a href="#">JS</a>
+                        <ul class="tab-content">
+<pre>
+$(".ul-tabs").UlTabs({
+    classTabWrapper: 'tab-link',
+    classTabContent: 'tab-content',
+    classActive: 'active',
+    border: 1,
+    height:30,
+    buttonType: 'a'
+});
+</pre>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
             </article>
 
             <article>
@@ -60,23 +108,73 @@
                         </ul>
                     </li>
                 </ul>
+
+                <h2>Source</h2>
+                <ul class="ul-tabs">
+                    <li class="tab-link active"><a href="#">HTML</a>
+                        <ul class="tab-content">
+<pre>
+<ul class="ul-tabs ul-tabs--arrow">
+    <li class="tab-link active"><a href="#">Regular</a>
+        <ul class="tab-content">
+            <li>First tab content</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+    </li>
+    <li class="tab-link"><a href="#">Super</a>
+        <ul class="tab-content">
+            <li>Second tab content</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+    </li>
+</ul>
+</pre>
+                        </ul>
+                    </li>
+                    <li class="tab-link"><a href="#">JS</a>
+                        <ul class="tab-content">
+<pre>
+$(".ul-tabs--arrow").UlTabs({
+    classTabWrapper: 'tab-link',
+    classTabContent: 'tab-content',
+    classActive: 'active',
+    border: 1,
+    height:30,
+    buttonType: 'a'
+});
+</pre>
+                        </ul>
+                    </li>
+                </ul>
+
             </article>
         </div>
     </div>
 
 
     <script>
+
+
+
 			$(function() {
 
-                console.log('yo');
+                //Escape code in pre
+                $( 'pre').each(function(){
+                    $(this).text( $(this).html() );
+                });
+
 				$(".ul-tabs").UlTabs({
 					classTabWrapper: 'tab-link',
                     classTabContent: 'tab-content',
                     classActive: 'active',
                     border: 1,
-                    height:30,
+                    height:30, //Same as in CSS
                     buttonType: 'a'
-
 				});
 
                 $(".ul-tabs--arrow").UlTabs({
@@ -84,9 +182,8 @@
                     classTabContent: 'tab-content',
                     classActive: 'active',
                     border: 1,
-                    height:30,
+                    height:30, //Same as in CSS
                     buttonType: 'a'
-
                 });
 			});
 		</script>
