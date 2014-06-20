@@ -1,12 +1,12 @@
 {
-	"name": "jquery-boilerplate",
-	"version": "3.3.3",
-	"homepage": "http://jqueryboilerplate.com",
+	"name": "UlTabs.js",
+	"version": "1",
+	"homepage": "https://github.com/adyz/UlTabs",
 	"authors": [
-		"Zeno Rocha <hi@zenorocha.com>"
+		"Adrian Florescu <contact@adrianflorescu.info>"
 	],
-	"description": "A jump-start for jQuery plugins development.",
-	"main": "src/jquery.boilerplate.js",
+	"description": "Convert unordered or ordered lists into tabs.",
+	"main": "src/jquery.UlTabs.js",
 	"keywords": [
 		"jquery",
 		"plugin",
