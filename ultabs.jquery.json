@@ -1,0 +1,36 @@
+{
+	"name": "UlTabs.js",
+	"title": "jQuery Ul Tabs",
+	"description": "Convert unordered or ordered lists into tabs.",
+	"keywords": [
+		"jquery",
+		"boilerplate",
+		"plugins"
+	],
+	"version": "1",
+	"author": {
+		"name": "Adrian Florescu",
+		"email": "contact@adrianflorescu.info",
+		"url": "http://adrianflorescu.info"
+	},
+	"maintainers": [
+		{
+			"name": "Adrian Florescu",
+			"email": "contact@adrianflorescu.info",
+			"url": "http://adrianflorescu.info"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/adyz/UlTabs/issues",
+	"homepage": "https://github.com/adyz/UlTabs",
+	"docs": "https://github.com/adyz/UlTabs#readme",
+	"download": "https://github.com/adyz/UlTabs/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
